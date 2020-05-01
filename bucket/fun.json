@@ -1,0 +1,16 @@
+{
+    "version": "3.6.11",
+    "description": "Complete set of commands to define, develop, test serverless applications, and deploy them to the Alibaba Cloud.",
+    "homepage": "https://alibabacloud.com/help/doc-detail/64204.html?lang=en",
+    "license": "MIT",
+    "url": "https://gosspublic.alicdn.com/fun/fun-v3.6.11-win.exe.zip",
+    "hash": "c0ef0cf9a2442c71194100ab2d724caeaaa0525ecf99e03fbd5766a5c4a07b39",
+    "pre_install": "Move-Item \"$dir\\fun*win.exe\" \"$dir\\fun.exe\"",
+    "bin": "fun.exe",
+    "checkver": {
+        "github": "https://github.com/alibaba/funcraft"
+    },
+    "autoupdate": {
+        "url": "https://gosspublic.alicdn.com/fun/fun-v$version-win.exe.zip"
+    }
+}

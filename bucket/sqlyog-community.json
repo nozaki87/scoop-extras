@@ -1,0 +1,31 @@
+{
+    "version": "13.1.6",
+    "description": "GUI for MySQL database",
+    "homepage": "https://www.webyog.com/product/sqlyog",
+    "license": "GPL-2.0-or-later",
+    "architecture": {
+        "64bit": {
+            "url": "https://s3.amazonaws.com/SQLyog_Community/SQLyog+13.1.6/SQLyog-13.1.6-0.x64Community.exe#/dl.7z",
+            "hash": "42568b23642c3e00e11b6cec958a4395b96538b04148b9855b4881392dce66d1"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$*\", \"$dir\\uninst*\" -Recurse",
+    "bin": "SQLyogCommunity.exe",
+    "shortcuts": [
+        [
+            "SQLyogCommunity.exe",
+            "SQLyog Community"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/webyog/sqlyog-community/wiki/Downloads",
+        "regex": "SQLyog ([\\d.]+)</h2>"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://s3.amazonaws.com/SQLyog_Community/SQLyog+$version/SQLyog-$version-0.x64Community.exe#/dl.7z"
+            }
+        }
+    }
+}

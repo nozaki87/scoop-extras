@@ -1,0 +1,37 @@
+{
+    "version": "3.1.45",
+    "description": "Powerful Android Line Messages Backup and Restore Software",
+    "homepage": "https://www.backuptrans.com/android-line-transfer.html",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://www.backuptrans.com/download/exe/android-line-transfer_x64.exe#/dl.7z",
+            "hash": "ef015a95d79a3f92c355ba6e211ebdc248fc2a98a1598671a742220d01ab5cea"
+        },
+        "32bit": {
+            "url": "https://www.backuptrans.com/download/exe/android-line-transfer.exe#/dl.7z",
+            "hash": "ace305cddf0d5c867b0f76652941714a8cd935c2be94da4c088fab18fe410b44"
+        }
+    },
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst*nsis\" -Recurse",
+    "shortcuts": [
+        [
+            "AndroidLineTransfer.exe",
+            "Backuptrans Android Line Transfer"
+        ]
+    ],
+    "checkver": {
+        "url": "https://www.backuptrans.com/download.html",
+        "regex": "(?sm)Backuptrans Android Line Transfer.*?V([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.backuptrans.com/download/exe/android-line-transfer_x64.exe#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://www.backuptrans.com/download/exe/android-line-transfer.exe#/dl.7z"
+            }
+        }
+    }
+}

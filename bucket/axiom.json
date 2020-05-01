@@ -1,0 +1,25 @@
+{
+    "version": "1.7.9.1-alpha",
+    "description": "GUI for FFmpeg",
+    "homepage": "https://axiomui.github.io/",
+    "license": "GPL-3.0-only",
+    "suggest": {
+        "ffmpeg": [
+            "ffmpeg",
+            "ffmpeg-nightly"
+        ]
+    },
+    "url": "https://github.com/MattMcManis/Axiom/releases/download/v1.7.9.1-alpha/Axiom.zip",
+    "hash": "4010ee3fc479541eca5afbed785a7d976691d782ad8ee20c4467bd590cac7158",
+    "bin": "Axiom.exe",
+    "shortcuts": [
+        [
+            "Axiom.exe",
+            "Axiom"
+        ]
+    ],
+    "checkver": "/releases/download/v([\\w.-]+)/Axiom\\.zip",
+    "autoupdate": {
+        "url": "https://github.com/MattMcManis/Axiom/releases/download/v$version/Axiom.zip"
+    }
+}

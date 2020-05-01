@@ -1,0 +1,37 @@
+{
+    "homepage": "https://www.balena.io/etcher/",
+    "license": "Apache-2.0",
+    "version": "1.5.83",
+    "description": "Flash OS images to SD cards & USB drives, safely and easily.",
+    "url": "https://github.com/balena-io/etcher/releases/download/v1.5.83/balenaEtcher-Setup-1.5.83.exe#/dl.7z",
+    "hash": "sha512:c93cf7d6af92a79fc4ee5af08a4704da8176df29fc71597825eeaf77c2af243d91062cd4e569f6c4497549a774c0b8458bdc2a884579672e0a26dc52f361eafe",
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
+            }
+        },
+        "32bit": {
+            "installer": {
+                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
+            }
+        }
+    },
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Uninstall*\" -Force -Recurse",
+    "shortcuts": [
+        [
+            "balenaEtcher.exe",
+            "Etcher"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/balena-io/etcher"
+    },
+    "autoupdate": {
+        "url": "https://github.com/balena-io/etcher/releases/download/v$version/balenaEtcher-Setup-$version.exe#/dl.7z",
+        "hash": {
+            "url": "$baseurl/latest.yml",
+            "regex": "sha512: $base64"
+        }
+    }
+}

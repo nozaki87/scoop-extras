@@ -1,0 +1,41 @@
+{
+    "homepage": "https://github.com/goreliu/wsl-terminal",
+    "description": "Terminal emulator for Windows Subsystem for Linux (WSL)",
+    "license": "MIT",
+    "version": "0.9.1",
+    "url": "https://github.com/goreliu/wsl-terminal/releases/download/v0.9.1/wsl-terminal-0.9.1.7z",
+    "hash": "046e96f496acddb9c2c3d14cb5e7562ea77c378cf2454abc21b9df1dc88761f6",
+    "extract_dir": "wsl-terminal",
+    "bin": [
+        [
+            "open-wsl.exe",
+            "wsl-terminal"
+        ],
+        "open-wsl.exe",
+        "run-wsl-file.exe",
+        [
+            "vim.exe",
+            "wsl-vim"
+        ]
+    ],
+    "persist": [
+        "etc\\wsl-terminal.conf",
+        "etc\\minttyrc",
+        "etc\\themes"
+    ],
+    "notes": "See usage: https://github.com/goreliu/wsl-terminal#usage",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/goreliu/wsl-terminal/releases/download/v$version/wsl-terminal-$version.7z",
+        "hash": {
+            "url": "https://github.com/goreliu/wsl-terminal/releases/latest",
+            "regex": "(?sm)$sha256</td>\\s+<td>$basename"
+        }
+    },
+    "shortcuts": [
+        [
+            "open-wsl.exe",
+            "wsl-terminal"
+        ]
+    ]
+}

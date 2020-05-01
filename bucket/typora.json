@@ -1,0 +1,42 @@
+{
+    "version": "0.9.86",
+    "description": "A decent markdown editor finally available on Windows",
+    "homepage": "https://typora.io",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://support.typora.io/License-Agreement/"
+    },
+    "notes": "Free during beta.",
+    "architecture": {
+        "64bit": {
+            "url": "https://typora.io/windows/typora-setup-x64.exe",
+            "hash": "4346b67a1409044f39ee50004395a03eef3443718639e34393afc25a7162ac3d"
+        },
+        "32bit": {
+            "url": "https://typora.io/windows/typora-setup-ia32.exe",
+            "hash": "6c4776ad0d3a7711ff33fc225db0fc3417a62692f229fccae3d881687b0272a4"
+        }
+    },
+    "innosetup": true,
+    "bin": "Typora.exe",
+    "shortcuts": [
+        [
+            "Typora.exe",
+            "Typora"
+        ]
+    ],
+    "checkver": {
+        "url": "https://typora.io/windows/dev_release.html",
+        "regex": "<h4>([\\d\\.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://typora.io/windows/typora-setup-x64.exe"
+            },
+            "32bit": {
+                "url": "https://typora.io/windows/typora-setup-ia32.exe"
+            }
+        }
+    }
+}

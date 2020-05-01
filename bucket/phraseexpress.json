@@ -1,0 +1,26 @@
+{
+    "homepage": "https://www.phraseexpress.com/",
+    "description": "Autotext and Text Autocompletion in any application.",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.phraseexpress.com/terms.htm"
+    },
+    "version": "14.0.184",
+    "url": "https://www.phraseexpress.com/PhraseExpress_USB.zip",
+    "hash": "858be0e45585a56b8aaf25b69781080ac169b11a17e98e0653b549f1252096ee",
+    "shortcuts": [
+        [
+            "PhraseExpress.exe",
+            "PhraseExpress"
+        ]
+    ],
+    "bin": "PhraseExpress.exe",
+    "extract_dir": "PhraseExpress",
+    "checkver": {
+        "url": "https://www.phraseexpress.com/download/",
+        "re": ">([\\d.]+)</"
+    },
+    "autoupdate": {
+        "url": "https://www.phraseexpress.com/PhraseExpress_USB.zip"
+    }
+}
